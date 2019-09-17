@@ -19,5 +19,13 @@ public class lifeleftService {
 
     Integer evRefence =0;
 
-  
+    @WebMethod
+    public String anneeRestanteAVivre(String prenom, String sexe, Integer anneeNaissance){
+        if(sexe.equals(homme)) evRefence= EXPERIENCE_VIE_HOMMES;
+        else  evRefence= EXPERIENCE_VIE_FEMMES;
+
+        Integer anneeRestante= evRefence-(Year.now().getValue()- anneeNaissance);
+
+        return "Bonjour "+ prenom+ ", il vous reste à vivre :"+ anneeRestante+" années";
+    }
 }
