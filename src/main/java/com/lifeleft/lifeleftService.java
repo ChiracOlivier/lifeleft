@@ -5,7 +5,7 @@ import javax.jws.WebService;
 import java.time.Year;
 
 /**
- * @webService
+ * @webService with serviceName = "lifeleftService"
  */
 @WebService(serviceName= "lifeleftService")
 public class lifeleftService {
