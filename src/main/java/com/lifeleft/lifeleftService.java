@@ -1,7 +1,13 @@
 package com.lifeleft;
 
+import javax.jws.WebMethod;
+import javax.jws.WebService;
 import java.time.Year;
 
+/**
+ * @webService
+ */
+@WebService(serviceName= "lifeleftService")
 public class lifeleftService {
 
 
@@ -13,12 +19,5 @@ public class lifeleftService {
 
     Integer evRefence =0;
 
-    public String anneeRestanteAVivre(String prenom, String sexe, Integer anneeNaissance){
-        if(sexe.equals(homme)) evRefence= EXPERIENCE_VIE_HOMMES;
-        else  evRefence= EXPERIENCE_VIE_FEMMES;
-
-        Integer anneeRestante= evRefence-(Year.now().getValue()- anneeNaissance);
-
-        return "Bonjour "+ prenom+ ", il vous reste à vivre :"+ anneeRestante+" années";
-    }
+  
 }
